@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ph-tube</title>
+    <!-- link tailwind css and daisyUi  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <header class="p-10">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="">
+                    <img class="w-32" src="Logo.png" alt="">
+              </div>
+            </div>
+            <div class="navbar-center">
+              <a class="btn bg-cyan-300 text-xl">Sort By View</a>
+            </div>
+            <div class="navbar-end">
+                <button class="btn btn-error text-white">Blog</button>
+            </div>
+            
+          </div>
+          <hr>
+    </header>
+    <main>
+        <!-- button section  -->
+        <div class="text-center ">
+            <button onclick="loadData()"  id="all-button" class="btn lg:px-10 mx-5">All</button>
+            <button id="music-button" class="btn lg:px-10">Music</button>
+            <button id="comedy-button" class="btn lg:px-10 lg:mx-5">Comedy</button>
+            <button id="drawing-button" class="btn lg:px-10">Drawing</button>
+        </div>
+
+        <!-- card to show data all  -->
+
+        <section class="px-12 my-12">
+            <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-12" id="card-container">
+                
+            </div>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>
