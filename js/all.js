@@ -1,18 +1,20 @@
-const loadData =async()=>{
-   const res = await fetch('https://openapi.programming-hero.com/api/videos/category/1000')
-   const allData = await res.json()
-   const datas = allData.data;
-//    console.log(datas)
-   displayData(datas)
-   
+const loadAllData = async ()=>{
+    const res = await fetch('https://openapi.programming-hero.com/api/videos/category/1000')
+    const datas = await res.json()
+    displayAllData(datas.data)
 }
 
-const displayData =(datas)=>{
+const displayAllData=(datas)=>{
     datas.forEach(data=>{
-        // console.log(data)
+        console.log(data)
+        
         const dataContainer = document.getElementById('card-container');
+        
+        
         const cardElement = document.createElement('div')
+        
         cardElement.classList=`card w-96 bg-base-100 shadow-xl`;
+        
         cardElement.innerHTML = `
         <figure>
             <img class='' src="${data.thumbnail}" alt="Shoes" />
@@ -39,15 +41,10 @@ const displayData =(datas)=>{
                     
                     </div>
         `
-
-        dataContainer.appendChild(cardElement)
+        
+        dataContainer.appendChild(cardElement)   
+        
     })
 }
 
-loadData()
-
-
-
-
-
-
+loadAllData()
